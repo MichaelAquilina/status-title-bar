@@ -128,12 +128,7 @@ const StatusTitleBarButton = new Lang.Class({
 
     _setTitle: function(win, app) {
         this._label.set_text("");
-
-        if (win.get_maximized() == FLAGS_MAXED) {
-            this._label.set_text(win.title);
-        } else if (app) {
-            this._label.set_text(app.get_name());
-        }
+        this._label.set_text(win.title);
     },
 
     // needed for maximize on window drag to top panel
